@@ -24,9 +24,9 @@
             </div> -->
         </div>
     </nav>
-    <!-- <div class="container w-50 mt-5 d-flex justify-content-end">
-        <button class="btn btn-warning" id="showTableBtn" type="button">Show table</button>
-    </div> -->
+    <div class="container w-50 mt-5 d-flex justify-content-end">
+        <button class="btn btn-warning" id="showTableBtn" type="button">Show table Data</button>
+    </div>
     <div class="container w-50 border mt-5 rounded-3 p-3 shadow-sm">
         <form action="" method="post" id="myForm">
             <div class="mb-3 d-flex justify-content-center bg-dark text-light rounded-3 pt-2">
@@ -34,29 +34,29 @@
             </div>
             <input type="hidden" id="id" name="id">
             <div class="mb-3">
-                <label for="" class="form-label">Name</label>
+                <label class="form-label">Name</label>
                 <input type="text" class="form-control" name="name" id="name">
             </div>
             <div class="mb-3">
-                <label for="" class="form-label">Email</label>
+                <label class="form-label">Email</label>
                 <input type="email" class="form-control" name="email" id="email">
                 <span id="text"></span>
             </div>
             <div class="mb-3">
-                <label for="" class="form-label">Password</label>
+                <label class="form-label">Password</label>
                 <input type="password" class="form-control" name="pass" id="pass">
             </div>
             <div class="mb-3">
-                <label for="" class="form-label">city</label>
+                <label class="form-label">city</label>
                 <input type="text" class="form-control" name="city" id="city">
-                <label for="" id="citylabel"></label>
+                <label id="citylabel"></label>
             </div>
             <div class="mb-3">
-                <label for="" class="form-label me-3">Gender</label>
-                <input type="radio" class="form-check-input" name="gender" id="gender" value="male">
-                <label for="" class="form-check-label">Male</label>
-                <input type="radio" class="form-check-input" name="gender" id="gender" value="female">
-                <label for="" class="form-check-label">Female</label>
+                <label class="form-label me-3">Gender</label>
+                <input type="radio" class="form-check-input" name="gender"  value="male">
+                <label class="form-check-label">Male</label>
+                <input type="radio" class="form-check-input" name="gender" value="female">
+                <label class="form-check-label">Female</label>
             </div>
             <div class="mb-3">
                 <input type="submit" class="btn btn-primary" id="save">
