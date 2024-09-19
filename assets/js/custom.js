@@ -1,5 +1,5 @@
 $(function () {
-  // $("table").hide();
+   $("table").hide();
   $("body").on("click", "#showTableBtn", function () {
     $("table").toggle();
   });
