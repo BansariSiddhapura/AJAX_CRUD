@@ -1,23 +1,30 @@
 $(function () {
-  $("table").hide();
+  // $("table").hide();
+  $("body").on("click", "#showTableBtn", function () {
+    $("table").toggle();
+  });
+
+  //--------------view------------------
   $.ajax({
     url: "view.php",
     type: "GET",
     dataType: "JSON",
   }).done(function (res) {
     $.each(res, function (i, v) {
-      console.log(res);
+      //console.log(res);
       $("#tbody").append(
-        `<tr><td>${v.id}</td><td>${v.name}</td><td>${v.email}</td><td>${v.city}</td><td>${v.gender}</td><td><button class="btn btn-warning">Edit</button><button class="btn btn-danger ms-2" id="delete">Delete</button></td></tr>`
+        `<tr><td>${v.id}</td>
+        <td>${v.name}</td>
+        <td>${v.email}</td>
+        <td>${v.city}</td>
+        <td>${v.gender}</td>
+        <td><button class="btn btn-warning" id="edit" data-id="${v.id}">Edit</button>
+        <button class="btn btn-danger ms-2" id="delete" data-id="${v.id}">Delete</button></td></tr>`
       );
     });
   });
 
-  $("body").on("click", "#showTableBtn", function (e) {
-    $("table").toggle();
- 
-  });
-
+  //---------------insert-----------------
   $("body").on("submit", "#myForm", function (e) {
     e.preventDefault();
     var formData = $(this).serialize();
@@ -29,8 +36,11 @@ $(function () {
       dataType: "JSON",
       data: formData,
     }).done(function (res) {
-      alert(res.message);
       $("#myForm").trigger("reset");
+      $('input[name="id"]').val("");
+      alert(res.message);
+      location.reload();
+
     });
   });
 
@@ -59,4 +69,38 @@ $(function () {
   //     $("#myForm").trigger("reset");
   //   });
   // });
+
+  //---------delete-------------
+  $("body").on("click", "#delete", function () {
+    var id = $(this).data("id");
+    $.ajax({
+      url: `delete.php?id=${id}`,
+      type: "POST",
+      dataType: "html",
+    }).done(function (res) {
+      //alert(res);
+      location.reload();
+    });
+  });
+
+  //----------------update/edit--------------
+  $("body").on("click","#edit",function(){
+    var id = $(this).data("id");
+    $.ajax({
+      url:`view.php?id=${id}`,
+      type:"POST",
+      dataType:"HTML"
+    }).done(function(res){   
+      var res=JSON.parse(res);
+      $("#id").val(res.id);
+      $("#name").val(res.name);
+      $("#email").val(res.email);
+      $("#pass").val(res.password);
+      $("#city").val(res.city);
+      res.gender == "male"
+      ? $('input[value="male"]').prop("checked", true)
+      : $('input[value="female"]').prop("checked", true);
+
+    })
+  })
 });

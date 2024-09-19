@@ -24,10 +24,10 @@
             </div> -->
         </div>
     </nav>
-    <div class="container w-50 mt-5 d-flex justify-content-end">
+    <div class="container w-50 mt-3 d-flex justify-content-end">
         <button class="btn btn-warning" id="showTableBtn" type="button">Show table Data</button>
     </div>
-    <div class="container w-50 border mt-5 rounded-3 p-3 shadow-sm">
+    <div class="container w-50 border mt-3 rounded-3 p-3 shadow-sm">
         <form action="" method="post" id="myForm">
             <div class="mb-3 d-flex justify-content-center bg-dark text-light rounded-3 pt-2">
                 <p class="fs-2" id="title">Client Form</p>
@@ -65,7 +65,10 @@
 
     </div>
     <div class="container w-75 border mt-5 rounded-3 p-3 shadow-sm">
-            <table class="table table-striped">
+    <div class="mb-3 d-flex justify-content-center bg-light text-dark rounded-3 pt-2">
+                <p class="fs-4" id="title">Client Table</p>
+            </div>
+            <table class="table table-striped" id="mytable">
                 <thead>
                     <th>ID</th>
                     <th>Name</th>
