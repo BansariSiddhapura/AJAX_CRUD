@@ -10,5 +10,5 @@ if (!isset($_GET['id'])) {
     $res=mysqli_query($conn,$select);
     $row=mysqli_fetch_assoc($res);
 }
-echo  json_encode($row);
+echo json_encode($row);
 ?>

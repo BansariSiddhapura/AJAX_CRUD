@@ -1,5 +1,5 @@
 $(function () {
-   $("table").hide();
+  // $("table").hide();
   $("body").on("click", "#showTableBtn", function () {
     $("table").toggle();
   });
@@ -29,7 +29,6 @@ $(function () {
     e.preventDefault();
     var formData = $(this).serialize();
     //console.log(formData);
-
     $.ajax({
       url: "insert.php",
       type: "POST",
@@ -40,7 +39,6 @@ $(function () {
       $('input[name="id"]').val("");
       alert(res.message);
       location.reload();
-
     });
   });
 
