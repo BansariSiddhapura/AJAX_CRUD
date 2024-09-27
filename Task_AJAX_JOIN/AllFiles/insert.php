@@ -4,7 +4,7 @@ include_once('connection.php');
 if (!empty($_POST)) {
     $type = $_GET['type'];
     
-    if ($type == 'customer') {
+    if ($type == 'joinCustCont') {
         $id = $_POST['id'];
         $comp = $_POST['comp'];
         $phone = $_POST['phone'];
@@ -46,11 +46,25 @@ if (!empty($_POST)) {
         $sdate=$_POST['sdate'];
         $edate=$_POST['edate'];
         if(!empty($id)){
-            $update="UPDATE `project` SET customer='$custFromDrop',firstName='$fnm',lastName='$lnm',email='$email',phone='$phone',password='$pass',primary_contact='$pCon' WHERE id='$id'";
+            $update="UPDATE `project` SET project_name='$pnm',customer='$cust',start_date='$sdate',end_date='$edate' WHERE id='$id'";
             mysqli_query($conn->DB,$update)?$message='update contact successfully':'can not update contact';
         }else{
             $insert="INSERT INTO `project`(project_name,customer,start_date,end_date)VALUES('$pnm','$cust','$sdate','$edate')";
             mysqli_query($conn->DB,$insert)?$message='insert project successfully':'can not insert project';
+        }
+        echo json_encode(['message'=>$message]);
+    }
+    if($type=='counter'){
+        $id=$_POST['id'];
+        $custName=$_POST['ctrCust'];
+        $proName=$_POST['ctrPro'];
+        $counterName=$_POST['counterName'];
+        if(!empty($id)){
+            $update="UPDATE `counter` SET customer='$custName',project_name='$proName',counter_name='$counterName' WHERE id='$id'";
+            mysqli_query($conn->DB,$update)?$message='update counter successfully':'can not update counter';
+        }else{
+            $insert="INSERT INTO `counter`(customer,project_name,counter_name)VALUES('$custName','$proName','$counterName')";
+            mysqli_query($conn->DB,$insert)?$message='insert counter successfully':'can not insert counter';
         }
         echo json_encode(['message'=>$message]);
     }

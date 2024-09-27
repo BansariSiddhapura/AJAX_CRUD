@@ -15,37 +15,41 @@
     <div class="container-fluid">
         <div class="row">
 
-            <div class="col col-2 vh-100 d-flex justify-content-center align-items-center border mt-3 rounded-3 m-2 shadow-sm flex-column">
+            <div class="col col-2  vh-100 d-flex justify-content-center align-items-center bg-dark flex-column pe-0">
                 <ul class="list-group gap-5 list-unstyled">
-                    <li><a class="btn-link text-decoration-none text-dark" id="customer">Customer </a></li>
-                    <li><a class="btn-link text-decoration-none text-dark" id="contact">Contact </a></li>
-                    <li><a class="btn-link text-decoration-none text-dark" id="project">Project </a></li>
-                    <li><a class="btn-link text-decoration-none text-dark">Counter </a></li>
+                    <li><a class="btn-link text-decoration-none text-light" id="customer">Customer </a></li>
+                    <li><a class="btn-link text-decoration-none text-light" id="contact">Contact </a></li>
+                    <li><a class="btn-link text-decoration-none text-light" id="project">Project </a></li>
+                    <li><a class="btn-link text-decoration-none text-light" id="counter">Counter </a></li>
                 </ul>
-
             </div>
 
-            <div class="col col-9">
+            <div class="col col-10 ps-0">
 
-                <div class="container-fluid d-flex justify-content-center align-items-center">
+                <div class="container-fluid d-flex align-items-center">
                     <div id="mainpage_content" class="container-fluid rounded-3 p-3 shadow-sm">
-                        <div class="border mt-1 rounded-3 p-3 d-flex justify-content-center fs-3 bg-dark text-light">WELCOME</div>
+                        <div class="border mt-1 rounded-3 p-3 d-flex justify-content-center fs-3 bg-light text-dark">WELCOME</div>
                     </div>
 
                     <!-- Customer Form -->
                     <div id="custFormDiv" class="container-fluid rounded-3 p-3 shadow-sm">
-                        <div class="border mt-1 rounded-3 p-3 mb-2 d-flex justify-content-center fs-3 bg-dark text-light">Customer</div>
+                        <div class="border mt-1 rounded-3 p-3 mb-2 d-flex justify-content-center fs-3 bg-light text-dark">Customer</div>
                         <?php include_once('customer.php'); ?>
                     </div>
                     <!-- Contact Form -->
                     <div id="contactFormDiv" class="container-fluid rounded-3 p-3 shadow-sm">
-                        <div class="border mt-1 rounded-3 p-3 mb-2 d-flex justify-content-center fs-3 bg-dark text-light">Contact</div>
+                        <div class="border mt-1 rounded-3 p-3 mb-2 d-flex justify-content-center fs-3 bg-light text-dark">Contact</div>
                         <?php include_once('contact.php'); ?>
                     </div>
                     <!-- Project Form -->
                     <div id="ProjectFormDiv" class="container-fluid rounded-3 p-3 shadow-sm">
-                        <div class="border mt-1 rounded-3 p-3 mb-2 d-flex justify-content-center fs-3 bg-dark text-light">Project</div>
+                        <div class="border mt-1 rounded-3 p-3 mb-2 d-flex justify-content-center fs-3 bg-light text-dark">Project</div>
                         <?php include_once('project.php'); ?>
+                    </div>
+                      <!-- Counter Form -->
+                      <div id="counterFormDiv" class="container-fluid rounded-3 p-3 shadow-sm">
+                        <div class="border mt-1 rounded-3 p-3 mb-2 d-flex justify-content-center fs-3 bg-light text-dark">Counter</div>
+                        <?php include_once('counter.php'); ?>
                     </div>
 
                 </div>

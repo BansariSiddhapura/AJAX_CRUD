@@ -1,7 +1,7 @@
 <?php
 include_once('connection.php');
 $type=$_GET['type'];
-if($type=='customer'){
+if($type=='joinCustCont'){
     if (!empty($_GET['id'])) {
        // $delete = "DELETE FROM `customer` WHERE id='" . $_GET['id'] . "'";
        $delete=$conn->delete('customer',"id='" . $_GET['id'] . "'");
@@ -18,4 +18,10 @@ if($type=='contact'){
         echo json_encode(['message' => $message]);
     }
 }
-
+if($type=='project'){
+    if(!empty($_GET['id'])){
+        $delete=$conn->delete('project',"id='" . $_GET['id'] . "'");
+        mysqli_query($conn->DB,$delete)?$message='project delete Successfully':$message="project doesn't delete";
+        echo json_encode(['message'=>$message]);
+    }
+}

@@ -20,7 +20,7 @@
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
-                    <form method="post" id="ProjectForm">
+                    <form method="post" id="customerForm">
                         <input type="hidden" id="id" name="id">
                 
                         <div class="mb-3">
@@ -51,10 +51,10 @@
     </div>
 </div>
 
-<div class="container-fluid border rounded-3 p-3 shadow-sm mb-5">
+<!-- <div class="container-fluid border rounded-3 p-3 shadow-sm mb-5">
     <div class="d-flex justify-content-start pb-3">
         <button id="addCustomer" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#custModel">ADD +</button>
-    </div>
+    </div> 
     <table class="table" id="custTable">
         <thead>
             <th>ID</th>
@@ -66,12 +66,12 @@
         </thead>
         <tbody id="custBody"></tbody>
     </table>
-</div>
+</div> -->
 
 
  <div class="container-fluid border rounded-3 p-3 shadow-sm">
-    <div class="d-flex justify-content-center pb-3">
-      <h3>Join Table</h3>
+    <div class="d-flex justify-content-start pb-3">
+      <button id="addCustomer" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#custModel">ADD +</button>
     </div>
     <table class="table" id="custTable">
         <thead>
@@ -81,6 +81,7 @@
             <th>Primary Email</th>
             <th>Phone</th>
             <th>Date Created</th>
+            <th>Action</th>
         </thead>
         <tbody id="custJoinTable"></tbody>
     </table>
