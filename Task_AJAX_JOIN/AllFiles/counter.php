@@ -3,7 +3,7 @@
         <div class="modal-dialog">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h1 class="modal-title fs-5" id="exampleModalLabel">Add Contact</h1>
+                    <h1 class="modal-title fs-5" id="exampleModalLabel">Add Counter</h1>
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
@@ -18,7 +18,7 @@
                         </div>
                         <div class="mb-3">
                             <label class="form-label">select Project</label>
-                            <select id="ctrPro" class="form-select" name="ctrPro">
+                            <select id="counterPro" class="form-select" name="ctrPro">
                                <option value="">select project</option>
                             </select>
                         </div>
