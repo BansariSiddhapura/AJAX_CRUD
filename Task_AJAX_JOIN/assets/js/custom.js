@@ -4,7 +4,6 @@ $(function () {
   $("#contactFormDiv").hide();
   $("#ProjectFormDiv").hide();
   $("#counterFormDiv").hide();
- // $("#detailsFormDiv").hide();
 
  $.ajax({
     url:'view.php?type=details',
@@ -31,7 +30,6 @@ $(function () {
     $("#custFormDiv").show();
     $("#ProjectFormDiv").hide();
     $("#counterFormDiv").hide();
-    //$("#detailsFormDiv").hide();
 
     // $.ajax({
     //   url: "view.php?type=customer",
@@ -128,7 +126,7 @@ $(function () {
     $("#custFormDiv").hide();
     $("#ProjectFormDiv").hide();
     $("#counterFormDiv").hide();
-   // $("#detailsFormDiv").hide();
+
     //--------dropdown customer on contact form----------
     $.ajax({
       url: "view.php?type=customer",
@@ -249,7 +247,7 @@ $(function () {
     $("#contactFormDiv").hide();
     $("#custFormDiv").hide();
     $("#counterFormDiv").hide();
-    //$("#detailsFormDiv").hide();
+   
     //--------dropdown customer on contact form----------
     $.ajax({
       url: "view.php?type=customer",
